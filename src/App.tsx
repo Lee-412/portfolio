@@ -27,7 +27,7 @@ const App = () => {
       <header className="sticky top-0 z-10 w-full border-b border-gray-800 bg-black/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <a href="#" className="text-xl font-bold tracking-tight">
-            John Doe
+            Lee Duc
           </a>
           <nav className="hidden md:flex gap-8">
             <a href="#about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
@@ -103,7 +103,7 @@ const App = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 z-10"></div>
                   <img 
                     src="/placeholder.jpg" 
-                    alt="John Doe" 
+                    alt="Lee Duc" 
                     className="absolute inset-0 w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -114,7 +114,7 @@ const App = () => {
               </div>
               <div className="md:w-3/5">
                 <h1 className="text-5xl font-bold mb-4 tracking-tight bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                  John Doe
+                  Lee Duc
                 </h1>
                 <h2 className="text-2xl text-gray-300 mb-6 font-light">Senior Frontend Developer</h2>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-2xl">
@@ -313,10 +313,10 @@ const App = () => {
                     <div>
                       <h3 className="text-sm font-medium text-gray-200">Email</h3>
                       <a
-                        href="mailto:john.doe@example.com"
+                        href="mailto:leeduchht@gmail.com"
                         className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
                       >
-                        john.doe@example.com
+                        leeduchht@gmail.com
                       </a>
                     </div>
                   </div>
@@ -327,10 +327,10 @@ const App = () => {
                     <div>
                       <h3 className="text-sm font-medium text-gray-200">Phone</h3>
                       <a
-                        href="tel:+1234567890"
+                        href="tel:0353475295"
                         className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
                       >
-                        +1 (234) 567-890
+                       0353475295
                       </a>
                     </div>
                   </div>
@@ -339,8 +339,8 @@ const App = () => {
                       <MapPin className="h-5 w-5 text-indigo-400" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-medium text-gray-200">Location</h3>
-                      <span className="text-sm text-gray-400">San Francisco, CA</span>
+                      <h3 className="text-sm font-medium text-gray-200">Ha Noi</h3>
+                      <span className="text-sm text-gray-400">Cau Giay</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -350,12 +350,12 @@ const App = () => {
                     <div>
                       <h3 className="text-sm font-medium text-gray-200">GitHub</h3>
                       <a
-                        href="https://github.com/johndoe"
+                        href="https://github.com/Lee-412"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-gray-400 hover:text-blue-400 transition-colors"
                       >
-                        github.com/johndoe
+                        github.com/Lee-412
                       </a>
                     </div>
                   </div>
@@ -411,7 +411,7 @@ const App = () => {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 border-0"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 joover:to-purple-700 border-0"
                       size="lg"
                     >
                       Send Message
@@ -425,12 +425,12 @@ const App = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 bg-black text-white">
+      <footer className="border-t border-gray-800 bg-black text-wjoite">
         <div className="container px-4 py-12 md:py-16">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                John Doe
+                Lee Duc
               </h3>
               <p className="text-gray-400 mb-4">
                 A passionate web developer focused on creating beautiful and functional websites.
@@ -522,21 +522,19 @@ const App = () => {
               <ul className="space-y-2">
                 <li className="text-gray-400">Web Development</li>
                 <li className="text-gray-400">UI/UX Design</li>
-                <li className="text-gray-400">Mobile Development</li>
-                <li className="text-gray-400">Technical Consulting</li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4 text-gray-200">Contact</h3>
               <address className="not-italic text-gray-400 space-y-2">
                 <p>San Francisco, CA</p>
-                <p>john.doe@example.com</p>
-                <p>+1 (234) 567-890</p>
+                <p>leeduchht@gmail.com</p>
+                <p>0353475295</p>
               </address>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+            <p>© {new Date().getFullYear()}Lee Duc. All rights reserved.</p>
           </div>
         </div>
       </footer>
