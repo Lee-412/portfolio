@@ -1,0 +1,2 @@
+#### Xin chào, mình là [Tên của bạn]! 👋
+Chào mừng bạn đến với Portfolio của mình! Đây là nơi mình chia sẻ các dự án, ý tưởng và hành trình học tập trong lĩnh vực Software Engineer . Mình luôn đam mê khám phá công nghệ mới và tạo ra những sản phẩm có giá trị. Hãy cùng khám phá nhé! 🚀
