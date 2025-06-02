@@ -1,80 +1,40 @@
-import { Github, Mail, MapPin, Phone, ArrowRight, Code, ExternalLink, Moon, Sun, Globe } from 'lucide-react'
+import { Github, Mail, MapPin, Phone, ArrowRight, Code, ExternalLink } from 'lucide-react'
 import { Button } from "./components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./components/ui/card"
 import { Badge } from "./components/ui/badge"
 import { backendSkills, frontendSkills, otherSkills, projects } from './lib/data'
-import { useEffect, useState } from 'react'
-
-// Define TypeScript interfaces
-
 
 const App = () => {
 
-    const [language, setLanguage] = useState<'en' | 'vi'>('en')
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
-  
-  // Effect to apply theme to document
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark')
-    document.documentElement.classList.toggle('light', theme === 'light')
-  }, [theme])
-  const toggleLanguage = () => setLanguage(prev => prev === 'en' ? 'vi' : 'en')
-  const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark')
-  
+
+
   return (
-    <div className={`min-h-screen ${theme}`}>
+    <div className={`min-h-screen `}>
       {/* Header */}
       <header className="sticky top-0 z-10 w-full border-b border-gray-800 bg-black/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <a href="#" className="text-xl font-bold tracking-tight">
             Lee Duc
           </a>
+
           <nav className="hidden md:flex gap-8">
             <a href="#about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              {language === 'en' ? 'About' : 'Giới thiệu'}
+              About
             </a>
             <a href="#skills" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              {language === 'en' ? 'Skills' : 'Kỹ năng'}
-            </a>
+              Skills            </a>
             <a href="#projects" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              {language === 'en' ? 'Projects' : 'Dự án'}
-            </a>
+              Projects            </a>
             <a href="#contact" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              {language === 'en' ? 'Contact' : 'Liên hệ'}
+              Contact
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            {/* Language Toggle Button */}
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleLanguage} 
-              className="rounded-full text-gray-300 hover:text-white hover:bg-gray-800"
-              aria-label={language === 'en' ? 'Switch to Vietnamese' : 'Switch to English'}
-            >
-              <Globe className="h-5 w-5" />
-              <span className="ml-1 text-xs font-medium">{language === 'en' ? 'EN' : 'VI'}</span>
-            </Button>
-            
-            {/* Theme Toggle Button */}
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleTheme} 
-              className="rounded-full text-gray-300 hover:text-white hover:bg-gray-800"
-              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </Button>
-            
+
             {/* Contact Button */}
             <Button asChild variant="outline" className="border-gray-700 text-white hover:bg-gray-800">
               <a href="#contact" className="gap-2 group">
-                {language === 'en' ? 'Get in touch' : 'Liên hệ'}
+                Contact in
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -91,19 +51,20 @@ const App = () => {
           }}
         >
           <div
-            className="absolute inset-0 opacity-[0.03]"
+            className="absolute inset-0 opacity-[0.05]"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("https://png.pngtree.com/thumb_back/fh260/background/20230930/pngtree-web-development-concept-programming-and-coding-illustrated-in-3d-image_13511770.png")`,
+
             }}
           ></div>
           <div className="container relative px-4 md:px-6">
             <div id="about" className="flex flex-col md:flex-row gap-12 items-center max-w-6xl mx-auto">
               <div className="md:w-2/5 flex justify-center">
                 <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-800 shadow-xl transition-transform hover:scale-105 duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 z-10"></div>
-                  <img 
-                    src="/placeholder.jpg" 
-                    alt="Lee Duc" 
+                  <div className="absolute "></div>
+                  <img
+                    src="/portfolio/quansu.jpg"
+                    alt="Lee Duc"
                     className="absolute inset-0 w-full h-full object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -116,27 +77,32 @@ const App = () => {
                 <h1 className="text-5xl font-bold mb-4 tracking-tight bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
                   Lee Duc
                 </h1>
-                <h2 className="text-2xl text-gray-300 mb-6 font-light">Senior Frontend Developer</h2>
+                <h2 className="text-2xl text-gray-300 mb-6 font-light">Fullstack web Developer</h2>
                 <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-2xl">
-                  I'm a passionate web developer with 5+ years of experience creating modern, responsive websites and
-                  applications. Specializing in React, Next.js, and modern frontend technologies to build exceptional
-                  digital experiences that help businesses grow.
+                  <p>                  Chào mọi người, Mình là Đức, sinh viên năm ba ngành Khoa học máy tính, trường Đại học Công nghệ (ĐHQGHN). Hiện tại, mình vẫn đang trong quá trình học tập và chuẩn bị làm khóa luận tốt nghiệp tại trường.
+                  </p>
+                  <p>                  Mình thích công nghệ, tìm hiểu những gì mới mẻ. Cũng nhờ ngành học mà mình có thể tiếp cận tới nhiều người, nhiều kiến thức và nhiều lĩnh vực hơn, mặc dù một số chỉ nằm ở mức độ xem và sử dụng ở mức độ tìm hiểu cơ bản.
+                  </p>
+                  <p>Hiện tại, mình đang theo mảng lập trình website, với Java cho backend. Trong quá trình học, mình cũng có 1 số project nhỏ, đủ để mình học tập và rèn luyện kiến thức.</p>
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8">
                   <Badge variant="outline" className="px-3 py-1 text-sm border-gray-700 bg-gray-800/50 text-gray-200">
-                    React
+                    Java Spring Boot
                   </Badge>
                   <Badge variant="outline" className="px-3 py-1 text-sm border-gray-700 bg-gray-800/50 text-gray-200">
-                    Next.js
+                    React
                   </Badge>
                   <Badge variant="outline" className="px-3 py-1 text-sm border-gray-700 bg-gray-800/50 text-gray-200">
                     TypeScript
                   </Badge>
                   <Badge variant="outline" className="px-3 py-1 text-sm border-gray-700 bg-gray-800/50 text-gray-200">
-                    Tailwind CSS
+                    RESTful APIs
                   </Badge>
                   <Badge variant="outline" className="px-3 py-1 text-sm border-gray-700 bg-gray-800/50 text-gray-200">
-                    Node.js
+                    JWT, Session, Cookie
+                  </Badge>
+                  <Badge variant="outline" className="px-3 py-1 text-sm border-gray-700 bg-gray-800/50 text-gray-200">
+                    Docker
                   </Badge>
                 </div>
                 <div className="flex gap-4">
@@ -164,9 +130,7 @@ const App = () => {
                 Professional Skills
               </h2>
               <p className="text-gray-300">
-                I've developed expertise in various technologies throughout my career, with a focus on frontend
-                development.
-              </p>
+                Trong quá trình học tập, mình có tiếp cận, nghiên cứu và sử dụng một số công nghê, ứng dụng nó trong việc lập trình website.            </p>
             </div>
 
             <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-3">
@@ -223,8 +187,7 @@ const App = () => {
                 Featured Projects
               </h2>
               <p className="text-gray-300">
-                Here are some of my recent projects that showcase my skills and expertise.
-              </p>
+                Dưới đây là một số dự án gần đây mà mình đã thực hiện.</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -293,8 +256,7 @@ const App = () => {
                 Get In Touch
               </h2>
               <p className="text-gray-300">
-                I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
-              </p>
+                Mình luôn sẵn sàng thảo luận về các dự án mới, ý tưởng sáng tạo hoặc cơ hội để trở thành một phần trong tầm nhìn của bạn. Liên hệ với mình nhé.            </p>
             </div>
 
             <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
@@ -330,7 +292,7 @@ const App = () => {
                         href="tel:0353475295"
                         className="text-sm text-gray-400 hover:text-purple-400 transition-colors"
                       >
-                       0353475295
+                        0353475295
                       </a>
                     </div>
                   </div>
@@ -527,14 +489,14 @@ const App = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4 text-gray-200">Contact</h3>
               <address className="not-italic text-gray-400 space-y-2">
-                <p>San Francisco, CA</p>
+                <p>Cau Giay - Ha Noi</p>
                 <p>leeduchht@gmail.com</p>
                 <p>0353475295</p>
               </address>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-            <p>© {new Date().getFullYear()}Lee Duc. All rights reserved.</p>
+            <p>© {new Date().getFullYear()}Lee Duc. Fullstack Website Developer.</p>
           </div>
         </div>
       </footer>
